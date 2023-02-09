@@ -1,0 +1,53 @@
+<html>
+<head>
+<style ;>
+#car {
+position: relative;
+cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<button id="right" type="button" onclick="right()">Right</button>
+<button id="right" type="button" onclick="diagonal()">Diagonal</button>
+<button id="right" type="button" onclick="up()">Up</button>
+<br></br><br></br>
+<br></br><br></br>
+<img id="car" src="https://gifdb.com/images/high/beep-beep-car-running-sbwx91jybevbfuvc.gif">
+<script>
+
+function right() 
+{
+    let start = Date.now();
+    let timer = setInterval(function() {
+    let timePassed = Date.now() - start;
+    car.style.left = timePassed / 5 + 'px';
+    if (timePassed > 2000) clearInterval(timer);
+    }, 50); // 0.02 seconds
+}
+
+function diagonal() 
+{
+    let start = Date.now();
+    let timer = setInterval(function() {
+    let timePassed = Date.now() - start;
+    car.style.top = timePassed / 5 + 'px';
+    car.style.left = timePassed / 5 + 'px';
+    if (timePassed > 2000) clearInterval(timer);
+    }, 50); // 0.02 seconds
+}
+
+function up() 
+{
+    let start = Date.now();
+    let timer = setInterval(function() {
+    let timePassed = Date.now() - start;
+    car.style.top = timePassed / 5 + 'px';
+    car.style.left = timePassed / 5 + 'px';
+    if (timePassed > 2000) clearInterval(timer);
+    }, 50); // 0.02 seconds
+}
+</script>
+
